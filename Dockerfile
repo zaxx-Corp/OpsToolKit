@@ -5,4 +5,4 @@ COPY package.json ./
 RUN npm install
 COPY . .
 EXPOSE 3000
-CMD [ "DEBUG=myapp:*","npm", "start" ]
+CMD [ "npm", "start" ]
