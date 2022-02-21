@@ -1,0 +1,85 @@
+extends layout
+
+block content
+  //- div 
+  //-   h2 #{obj.title}
+  //-   p #{obj.desc}
+  //-   p #{obj.product} - #{obj.version}
+  //-   hr
+  //-   div !{html}
+
+  section.my-5
+  .container.p-2
+    .row
+      .col-lg-8.mx-auto.text-center
+        h1.display-4 OpsWorks
+        p.lead.mb-0 A central place get all your all setups
+
+  .container.mt-5
+    .row
+      .col-lg-4
+        .card.card-margin
+          .card-header.no-border
+            h5.card-title Docker
+          .card-body.pt-0
+            .widget-49
+              .widget-49-title-wrapper
+                .widget-49-date-primary
+                  img(src="https://www.docker.com/sites/default/files/d8/2019-07/vertical-logo-monochromatic.png", alt="docker", srcset="").img-thumbnail
+                  
+                .widget-49-meeting-info
+                  span.widget-49-pro-title PRO-08235 DeskOpe. Website
+                  span.widget-49-meeting-time 12:00 to 13.30 Hrs
+              ol.widget-49-meeting-points
+                li.widget-49-meeting-item
+                  span Expand module is removed
+                li.widget-49-meeting-item
+                  span Data migration is in scope
+                li.widget-49-meeting-item
+                  span Session timeout increase to 30 minutes
+              .widget-49-meeting-action
+                a.btn.btn-sm.btn-flash-border-primary(href='/page/one') View All
+      .col-lg-4
+        .card.card-margin
+          .card-header.no-border
+            h5.card-title Ansible
+          .card-body.pt-0
+            .widget-49
+              .widget-49-title-wrapper
+                .widget-49-date-warning
+                  span.widget-49-date-day 13
+                  span.widget-49-date-month apr
+                .widget-49-meeting-info
+                  span.widget-49-pro-title PRO-08235 Lexa Corp.
+                  span.widget-49-meeting-time 12:00 to 13.30 Hrs
+              ol.widget-49-meeting-points
+                li.widget-49-meeting-item
+                  span Scheming module is removed
+                li.widget-49-meeting-item
+                  span App design contract confirmed
+                li.widget-49-meeting-item
+                  span Client request to send invoice
+              .widget-49-meeting-action
+                a.btn.btn-sm.btn-flash-border-warning(href='/page/two') View All
+      .col-lg-4
+        .card.card-margin
+          .card-header.no-border
+            h5.card-title Kubernetes
+          .card-body.pt-0
+            .widget-49
+              .widget-49-title-wrapper
+                .widget-49-date-success
+                  span.widget-49-date-day 22
+                  span.widget-49-date-month apr
+                .widget-49-meeting-info
+                  span.widget-49-pro-title PRO-027865 Opera module
+                  span.widget-49-meeting-time 12:00 to 13.30 Hrs
+              ol.widget-49-meeting-points
+                li.widget-49-meeting-item
+                  span Scope is revised and updated
+                li.widget-49-meeting-item
+                  span Time-line has been changed
+                li.widget-49-meeting-item
+                  span Received approval to start wire-frame
+              .widget-49-meeting-action
+                a.btn.btn-sm.btn-flash-border-success(href='#') View All
