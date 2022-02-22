@@ -9,7 +9,8 @@ With Docker, you can manage your infrastructure in the same ways you manage your
 <br>
 <br>
 ## Steps
-<br>
+
+
 Update apt packages.
 
     sudo apt update -y
@@ -63,6 +64,5 @@ Make sure to use sudo before docker command if you are not root user due to priv
 
 > Now you can use docker command without the need of typing sudo everytime.
 
-<br>
 
 ## Have fun with docker.
