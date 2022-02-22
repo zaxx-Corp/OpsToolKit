@@ -4,7 +4,7 @@ product: Docker
 version: 20.2
 steps:
   - instance: ubuntu
-    file: demo.md
+    file: docker_ubuntu.md
   - instance: AWS EC2
     file: demo.md
   - instance: Azure
