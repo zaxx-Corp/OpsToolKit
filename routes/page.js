@@ -5,14 +5,24 @@ let { convertToHTML, convertYAML } = require("../workers/index");
 router.get('/:slug', async function (req, res, next) {
 
     let slug = req.params.slug;
-    if (slug === "one") {
-        const html = await convertToHTML();
-        const yamlObj = convertYAML("basic.yaml");
+    let readmes = [];
 
-        res.render('page', { title: 'Express', html, yamlObj });
-    } else {
-        next();
+    const yamlObj = convertYAML(slug);
+    console.log(yamlObj);
+    if (yamlObj instanceof Object) {
+        if (slug === yamlObj.product.toLowerCase()) {
+            for (let i = 0; i < yamlObj.steps.length; i++) {
+                readmes.push(await convertToHTML(yamlObj.steps[i].file))
+            }
+            console.log(readmes);
+            res.render('page', { title: 'Express', yamlObj, html: readmes });
+        } else {
+            next();
+        }
     }
+    else
+        next();
+    // 
 
 
 });

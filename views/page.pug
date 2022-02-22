@@ -14,7 +14,6 @@ block content
          .display-4 #{yamlObj.title}
          .lead #{yamlObj.desc}
          .lead #{yamlObj.product} - #{yamlObj.version}
-         hr
          #accordionFlushExample.accordion.accordion-flush
           each val,index in yamlObj.steps
             .accordion-item
@@ -23,5 +22,5 @@ block content
                 | #{val.instance}
             div(id="flush-collapseOne"+index).accordion-collapse.collapse(aria-labelledby='flush-headingOne' data-bs-parent='#accordionFlushExample')
               .accordion-body
-                | !{html}
+                | !{html[index]}
           
