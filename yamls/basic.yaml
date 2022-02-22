@@ -1,9 +1,13 @@
-title: Hello
-description: lorem ipsum gg
+title: Setup Guide
+description: Beginer setup guide for Docker
 product: Docker
 version: 20.2
 steps:
   - instance: ubuntu
     file: demo.md
-  - instance: EC2
+  - instance: AWS EC2
+    file: demo.md
+  - instance: Azure
+    file: demo.md
+  - instance: GCP
     file: demo.md
