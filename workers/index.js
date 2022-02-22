@@ -14,7 +14,7 @@ let MarkdownIt = require('markdown-it'),
 const readFile = util.promisify(fs.readFile);
 
 const readMDFile = async (fileName) => {
-    const fullPath = path.join(`${__dirname}`, "../", "markdown", fileName);
+    const fullPath = path.join(`${__dirname}`, "../", "markdown", `${fileName}`);
     try {
         return data = await readFile(fullPath, 'utf-8');
     } catch (err) {
@@ -24,14 +24,19 @@ const readMDFile = async (fileName) => {
 
 
 const convertYAML = (fileName) => {
-    const fullPath = path.join(`${__dirname}`, "../", "yamls", fileName)
-    const data = yaml.load(fullPath);
-    return data;
+    try {
+        const fullPath = path.join(`${__dirname}`, "../", "yamls", `${fileName}.yaml`)
+        const data = yaml.load(fullPath);
+        return data;
+    } catch (err) {
+        return "File not found!"
+    }
+
 }
 
 
-const convertToHTML = async () => {
-    const data = await readMDFile("demo.md")
+const convertToHTML = async (fileName) => {
+    const data = await readMDFile(fileName);
     const d = md.render(data);
     return d;
 }

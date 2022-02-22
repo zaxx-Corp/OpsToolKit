@@ -1,10 +1,10 @@
 title: Setup Guide
-description: Beginer setup guide for Docker
+description: Complete setup guides for Docker Installation
 product: Docker
 version: 20.2
 steps:
-  - instance: ubuntu
-    file: demo.md
+  - instance: Ubuntu
+    file: docker_ubuntu.md
   - instance: AWS EC2
     file: demo.md
   - instance: Azure

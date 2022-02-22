@@ -1,0 +1,7 @@
+title: Setup Guide
+description: Complete setup guides for Ansible Installation
+product: Ansible
+version: 20.2
+steps:
+  - instance: Ubuntu
+    file: ansible_ubuntu.md
