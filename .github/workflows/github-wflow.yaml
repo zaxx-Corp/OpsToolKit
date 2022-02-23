@@ -2,7 +2,7 @@ name: ci
 true:
   push:
     branches:
-      - cicd
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
