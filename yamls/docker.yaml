@@ -6,8 +6,8 @@ steps:
   - instance: Ubuntu
     file: docker_ubuntu.md
   - instance: AWS EC2
-    file: demo.md
+    file: docker_aws.md
   - instance: Azure
-    file: demo.md
+    file: docker_azure.md
   - instance: GCP
-    file: demo.md
+    file: docker_gcp.md

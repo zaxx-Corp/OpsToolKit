@@ -8,21 +8,18 @@ router.get('/:slug', async function (req, res, next) {
     let readmes = [];
 
     const yamlObj = convertYAML(slug);
-    console.log(yamlObj);
     if (yamlObj instanceof Object) {
         if (slug === yamlObj.product.toLowerCase()) {
             for (let i = 0; i < yamlObj.steps.length; i++) {
                 readmes.push(await convertToHTML(yamlObj.steps[i].file))
             }
-            console.log(readmes);
-            res.render('page', { title: 'Express', yamlObj, html: readmes });
+            res.render('page', { title: yamlObj.product, yamlObj, html: readmes });
         } else {
             next();
         }
     }
     else
         next();
-    // 
 
 
 });

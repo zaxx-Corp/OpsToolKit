@@ -12,6 +12,7 @@ let MarkdownIt = require('markdown-it'),
     }).use(require('markdown-it-highlightjs'));
 
 const readFile = util.promisify(fs.readFile);
+const readDir = util.promisify(fs.readdir);
 
 const readMDFile = async (fileName) => {
     const fullPath = path.join(`${__dirname}`, "../", "markdown", `${fileName}`);
@@ -34,6 +35,18 @@ const convertYAML = (fileName) => {
 
 }
 
+const getProducts = async () => {
+    try {
+        const fullPath = path.join(`${__dirname}`, "../", "yamls");
+        const data = await readDir(fullPath);
+        const d = data.map(item => item.split(".")[0])
+        return d;
+    } catch {
+        console.log("error");
+    }
+}
+
+getProducts();
 
 const convertToHTML = async (fileName) => {
     const data = await readMDFile(fileName);
@@ -43,5 +56,6 @@ const convertToHTML = async (fileName) => {
 
 module.exports = {
     convertYAML,
-    convertToHTML
+    convertToHTML,
+    getProducts
 }
