@@ -5,3 +5,5 @@ version: 20.2
 steps:
   - instance: Ubuntu
     file: ansible_ubuntu.md
+  - instance: AWS EC2
+    file: ansible_ec2.md
