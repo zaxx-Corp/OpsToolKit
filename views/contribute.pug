@@ -2,5 +2,32 @@ extends layout
 
 block content
 
-    h1 How to Contribute 
+    .container 
+      .row.mt-5
+        div.text-left 
+          .display-4.text-center How to Contribute 
 
+          p.lead.my-4.text-info Please follow the below steps and pre-requisites to contribute any topics
+
+          h4.my-2 Pre-Requisites 
+
+          ul.list-group.list-group-flush 
+            li.list-group-item.mb-2 Node JS must installed in you setup if you want to run the application locally and check 
+            li.list-group-item.mb-2 Go to <a href='https://github.com/zaxx-Corp/OpsToolKit/tree/example' target="_blank">this<a/> repository and fork the repository.
+            li.list-group-item.mb-2 After forking clone it to you local system and switch to staging branch 
+            li.list-group-item.mb-2 Make your updates and create a new branch and then push the codes to that branch.
+            li.list-group-item.mb-2 You will create a pull request
+
+          h4.my-2 Steps
+
+
+          ul.list-group.list-group-flush
+            li.list-group-item.mb-2 Create a yaml file with the product name. e.g: for docker it should be docker.yaml, inside yamls folder.
+            li.list-group-item.mb-2 Follow the instructions given inside examples/example.yaml for the structure of your yaml file.
+            li.list-group-item.mb-2 Then follow the instructions given inside examples/production_instance.md for the structure of your setup instruction file.
+            li.list-group-item.mb-2 Once the yaml file is setup, then you can multiple instances of markdown files and you have to update the yaml setup file by adding instance and the name of the instruction file.
+            li.list-group-item.mb-2 <span class="text-warning">[Optional]</span> Next open a terminal window and check as if all the tests are passing, by running <code> npm run test</code>. 
+            li.list-group-item.mb-2  <span class="text-warning">[Optional]</span> Next open a terminal window and run <code>npm run dev</code> and go to <code> localhost:3000 </code>
+            li.list-group-item.mb-2 <span class="text-warning">[Optional]</span> Check your works if after adding the files is everything working fine or not 
+            li.list-group-item.mb-2 Push it to your created branch and then create a pull request.
+            li.list-group-item.mb-2 After reviewed from our side we will merge the changes and you can see the changes in the website. 
