@@ -7,31 +7,10 @@ block content
     .row
       .col-lg-8.mx-auto.text-center
         h1.display-4 OpsWorks
-        p.lead.mb-0 A central place get all your all setups
+        p.lead.my-5 A central place where you can find resources for development or testing or automation works; at your desktop or server or virtual machine. 
 
-  .container.mt-5
+  .container.topics-space
     .row
       each product in prods
-        .col-lg-4
-          .card.card-margin
-            .card-header.no-border
-              h5.card-title #{product}
-            .card-body.pt-0
-              .widget-49
-                .widget-49-title-wrapper
-                  .widget-49-date-primary
-                    i.fa-brands.fa-docker
-                    
-                  .widget-49-meeting-info
-                    span.widget-49-pro-title PRO-08235 DeskOpe. Website
-                    span.widget-49-meeting-time 12:00 to 13.30 Hrs
-                ol.widget-49-meeting-points
-                  li.widget-49-meeting-item
-                    span Expand module is removed
-                  li.widget-49-meeting-item
-                    span Data migration is in scope
-                  li.widget-49-meeting-item
-                    span Session timeout increase to 30 minutes
-                .widget-49-meeting-action
-                  a.btn.btn-sm.btn-flash-border-primary(href='/page/'+product) View All
-     
+        .col-lg-4.topic-row-space
+          a.headers.btn.btn-sm.btn-flash-border-secondary(href='/page/'+product) #{product}

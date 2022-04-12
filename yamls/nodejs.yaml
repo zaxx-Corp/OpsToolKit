@@ -1,5 +1,5 @@
 title: Setup Guide
-product: Kubernetes
+product: NodeJS
 version: 20.2
 steps:
   - instance: Ubuntu

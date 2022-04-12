@@ -1,24 +1,18 @@
 extends layout
 
 block content
-  //- div 
-  //-   h2 #{obj.title}
-  //-   p #{obj.desc}
-  //-   p #{obj.product} - #{obj.version}
-  //-   hr
-  //-   div !{html}
  
   .container.mt-5
     .row
       .py-5
-         .display-4 #{yamlObj.title}
-         .lead #{yamlObj.desc}
-         .lead #{yamlObj.product} - #{yamlObj.version}
-         #accordionFlushExample.accordion.accordion-flush
+         .display-4 #{yamlObj.title} for #{yamlObj.product}
+         .lead.m-2 #{yamlObj.desc}
+         .lead.m-2 Version - #{yamlObj.version}
+         #accordionFlushExample.accordion.accordion-flush.m-4
           each val,index in yamlObj.steps
             .accordion-item
             h2#flush-headingOne.accordion-header
-              button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseOne'+index aria-expanded='false' aria-controls='flush-collapseOne'+index )
+              button.h3.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseOne'+index aria-expanded='false' aria-controls='flush-collapseOne'+index )
                 | #{val.instance}
             div(id="flush-collapseOne"+index).accordion-collapse.collapse(aria-labelledby='flush-headingOne' data-bs-parent='#accordionFlushExample')
               .accordion-body

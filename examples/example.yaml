@@ -1,0 +1,6 @@
+title: Your Title
+product: Name of the Product
+version: For what version you are providing details
+steps:
+  - instance: Name of the instance eg. Windows/MacOS etc
+    file: name of the file where the setup details are there. It must be a markdown file.
