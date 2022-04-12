@@ -6,3 +6,5 @@ steps:
     file: ansible_ubuntu.md
   - instance: AWS EC2
     file: ansible_ec2.md
+  - instance: GCP
+    file: ansible_gcp.md
